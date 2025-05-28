@@ -57,7 +57,7 @@ def generate_summary(transcript_text):
 
 # Streamlit app layout
 st.set_page_config(page_title="YouTube Video Summarizer", layout="centered")
-st.title("🎥 YouTube Transcript Summarizer")
+st.title("YouTube Transcript Summarizer")
 
 youtube_link = st.text_input("Paste YouTube Video URL:")
 
@@ -74,7 +74,7 @@ if st.button("Summarize Video"):
             with st.spinner("Generating summary..."):
                 summary = generate_summary(transcript)
             if summary:
-                st.markdown("## 📝 Summary:")
+                st.markdown("## Summary:")
                 st.write(summary)
             else:
                 st.error("Failed to generate summary.")
